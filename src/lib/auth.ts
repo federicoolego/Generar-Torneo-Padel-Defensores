@@ -7,8 +7,8 @@
  * Importante: como es una app sin servidor, esto es una barrera de acceso, no una protección
  * de datos. No hay datos que proteger: todo lo que se carga queda solo en el navegador de quien lo usa.
  */
-export const CREDENCIAL = { sal: 'a4316bdbeb3fb975647c3748c18f78c7', hash: '961a29b3288a14794ea360424e90bff71f47a73be77ccb6098482e6c9e88df18', iteraciones: 310000 }
-
+//export const CREDENCIAL = { sal: 'a4316bdbeb3fb975647c3748c18f78c7', hash: '961a29b3288a14794ea360424e90bff71f47a73be77ccb6098482e6c9e88df18', iteraciones: 310000 }
+export const CREDENCIAL = { sal: '1970164f70ef1bbd12409d456655fae2', hash: 'bd78e905361b19b00b6bd4e55d76c93cbc4afb8c9de07d481a3cdb00e3ebb473', iteraciones: 310000 }
 const CLAVE_SESION = 'defensores-generador:sesion'
 const DURACION_MS = 12 * 60 * 60 * 1000   // 12 horas
 
