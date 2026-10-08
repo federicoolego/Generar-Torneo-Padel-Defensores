@@ -9,7 +9,7 @@ import { SelectorFormato } from '../Formato'
 import { EditorHorario } from '../Horarios'
 
 // Colores del documento (los de la marca del complejo)
-const COLORES = { oscuro: '#3A0A06', acento: '#E8B84A', suave: '#F8F3F2' }
+const COLORES = { oscuro: '#141414', acento: '#8A8A8A', suave: '#F2F2F2', fondoLogo: '#FFFFFF' }
 
 type Cambiar = (f: (c: Categoria) => Categoria) => void
 type Props = { cat: Categoria; cambiar: Cambiar; onRecargar: () => Promise<void> }

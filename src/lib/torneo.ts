@@ -1,6 +1,6 @@
 // Lógica de zonas y playoff (modelo en memoria; se guarda en Supabase desde almacen.ts)
 
-/** Defensores tiene una sola sede: `sede` existe por compatibilidad con la base y no se carga. `cancha` quedó de versiones anteriores */
+/** Complejo PM tiene una sola sede: `sede` existe por compatibilidad con la base y no se carga. `cancha` quedó de versiones anteriores */
 export interface Horario { fecha: string; hora: string; sede?: string; cancha?: string }
 
 export interface Pareja {
