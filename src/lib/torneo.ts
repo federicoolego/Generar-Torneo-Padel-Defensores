@@ -1,6 +1,6 @@
 // Lógica de zonas y playoff (modelo en memoria; se guarda en Supabase desde almacen.ts)
 
-/** Complejo PM tiene una sola sede: `sede` existe por compatibilidad con la base y no se carga. `cancha` quedó de versiones anteriores */
+/** Defensores tiene una sola sede: `sede` existe por compatibilidad con la base y no se carga. `cancha` quedó de versiones anteriores */
 export interface Horario { fecha: string; hora: string; sede?: string; cancha?: string }
 
 export interface Pareja {
@@ -115,6 +115,10 @@ export function nuevoId(): string {
   return `${h.slice(0, 8)}-${h.slice(8, 12)}-${h.slice(12, 16)}-${h.slice(16, 20)}-${h.slice(20)}`
 }
 export const esUuid = (v: string) => /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v)
+
+/** Datos obligatorios del paso "Torneo": nombre y fechas (fin igual o posterior al inicio). Recién ahí se crea en la base */
+export const datosCompletos = (c: Pick<Categoria, 'torneo' | 'fechaInicio' | 'fechaFin'>) =>
+  !!c.torneo.trim() && !!c.fechaInicio && !!c.fechaFin && c.fechaFin >= c.fechaInicio
 
 export function nuevaCategoria(): Categoria {
   return {
